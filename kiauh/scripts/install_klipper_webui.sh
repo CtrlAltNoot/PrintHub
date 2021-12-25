@@ -113,7 +113,6 @@ install_macros(){
     fi
     ### restart klipper service to parse the modified printer.cfg
     do_action_service "restart" "klipper"
-  fi
 }
 
 mainsail_port_check(){

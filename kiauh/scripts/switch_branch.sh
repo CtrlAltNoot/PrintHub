@@ -25,11 +25,10 @@ switch_to_scurve_smoothing(){
 switch_to_dgus_display(){
   cd $KLIPPER_DIR
   status_msg "Switching... Please wait..."; echo
-  if ! git remote | grep desuuuu -q; then
-    git remote add desuuuu https://github.com/Desuuuu/klipper.git
-	status_msg "Added new remote: 'Desuuuu' repo!"; echo
+    git remote set-url origin https://github.com/Desuuuu/klipper.git
+	ok_msg "Set repo origin to: 'Desuuuu' repo!"; echo
   fi
   status_msg "Fetching Desuuuu/klipper..."; echo
-  git fetch desuuuu -q && git checkout master; echo
-  status_msg "Done fetching Desuuuu/klipper!"; echo
+  git fetch origin -q && git checkout master; echo
+  ok_msg "Done fetching Desuuuu/klipper!"; echo
 }
