@@ -25,9 +25,8 @@ switch_to_scurve_smoothing(){
 switch_to_dgus_display(){
   cd $KLIPPER_DIR
   status_msg "Switching... Please wait..."; echo
-    git remote set-url origin https://github.com/Desuuuu/klipper.git
-	ok_msg "Set repo origin to: 'Desuuuu' repo!"; echo
-  fi
+  git remote set-url origin https://github.com/Desuuuu/klipper.git
+  ok_msg "Set repo origin to: 'Desuuuu' repo!"; echo
   status_msg "Fetching Desuuuu/klipper..."; echo
   git fetch origin -q && git checkout master; echo
   ok_msg "Done fetching Desuuuu/klipper!"; echo
